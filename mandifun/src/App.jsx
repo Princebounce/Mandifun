@@ -15,7 +15,7 @@ const App = () => {
 const [orderPopup, setOrderPopup] = React.useState(false);
 const handleOrderPopup = () => {
   setOrderPopup(!orderPopup);
-}
+};
 
   React.useEffect(() => {
     AOS.init({
