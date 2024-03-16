@@ -3,6 +3,8 @@ import Logo from "../../assets/logo.svg";
 import { IoMdSearch } from "react-icons/io";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
+import useDarkMode from "./useDarkMode"; // Import useDarkMode hook
+
 
 const Menu = [
   { id: 1, name: "Home", link: "/#" },
@@ -18,6 +20,7 @@ const DropdownLinks = [
 ];
 
 const Navbar = ({ handleOrderPopup }) => {
+  const [theme, toggleTheme] = useDarkMode();
   return (
     <div
       className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative-z-40 "
@@ -53,9 +56,9 @@ const Navbar = ({ handleOrderPopup }) => {
             </button>
             {/* Darkmode switch */}
             <div>
-              {/* Pass toggleTheme and currentTheme as props */}
-              <DarkMode />
-            </div>
+        {/* Pass toggleTheme and currentTheme as props */}
+        <DarkMode toggleTheme={toggleTheme} />
+      </div>
           </div>
         </div>
       </div>
