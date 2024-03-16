@@ -1,29 +1,38 @@
 import React from "react";
-import LightButton from "../../assets/light-mode.svg";
-import DarkButton from "../../assets/dark-mode.svg";
-import useDarkMode from "./useDarkMode";
+import { FiSun, FiMoon } from "react-icons/fi"; // Import icons for light and dark modes
 
 const DarkMode = () => {
-  const [theme, toggleTheme] = useDarkMode();
+  const [theme, setTheme] = React.useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  React.useEffect(() => {
+    const element = document.documentElement;
+    if (theme === "dark") {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [theme]);
 
   return (
-    <div className="relative">
-      {/* Light Mode Button */}
-      <img
-        src={LightButton}
-        alt="lightmode"
-        onClick={toggleTheme}
-        className={`w-12 cursor-pointer drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300
-        absolute right-0 z-10 ${theme === "dark" ? "opacity-0" : "opacity-100"}`}
-      />
-      {/* Dark Mode Button */}
-      <img
-        src={DarkButton}
-        alt="darkmode"
-        onClick={toggleTheme}
-        className="w-12 cursor-pointer drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300 "
-      />
-    </div>
+    <button
+      className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 
+                 transition duration-300 ease-in-out focus:outline-none"
+      onClick={toggleTheme}
+    >
+      {theme === "light" ? (
+        <FiMoon className="text-gray-600 dark:text-gray-400" />
+      ) : (
+        <FiSun className="text-yellow-500" />
+      )}
+    </button>
   );
 };
 
