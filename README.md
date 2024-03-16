@@ -1,4 +1,4 @@
-# E-Commerce Website
+# Mandfiun
 
 This project is an E-Commerce website built using React and Vite. It features various components such as a navbar, hero section, products display, top products section, banner, subscription form, testimonials, footer, and a popup for placing orders.
 
