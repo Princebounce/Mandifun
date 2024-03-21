@@ -64,7 +64,7 @@ const TopProducts = ({handleOrderPopup}) => {
                   alt=""
                   className="max-w-[140px] block mx-auto
             transform-translate-y-20 group-hover:scale-105
-            duration-300 drop-shadow-lg "
+            duration-300 drop-shadow-lg mt-4 "
                 />
               </div>
               {/* details section  */}
