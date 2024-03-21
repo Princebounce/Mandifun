@@ -64,7 +64,7 @@ const TopProducts = ({handleOrderPopup}) => {
                   alt=""
                   className="max-w-[140px] block mx-auto
             transform-translate-y-20 group-hover:scale-105
-            duration-300 drop-shadow-md "
+            duration-300 drop-shadow-lg "
                 />
               </div>
               {/* details section  */}
@@ -75,7 +75,7 @@ const TopProducts = ({handleOrderPopup}) => {
                   <FaStar className="text-yellow-500"></FaStar>
                   <FaStar className="text-yellow-500"></FaStar>
                 </div>
-                <h1 className="text-xl font-bold">{data.title}</h1>
+                <h1 className="text-xl mt-3 font-bold">{data.title}</h1>
                 <p
                   className="text-gray-500 group-hover:text-white duration-300
             text-sm line-clamp-2"

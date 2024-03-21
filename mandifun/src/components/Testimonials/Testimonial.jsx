@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 
 const TestimonialData = [
-
   {
     id: 1,
     name: "Victor Jnr",
@@ -79,19 +78,20 @@ const Testimonial = () => {
       <div className="container">
         {/* header section  */}
         <div className=" text-center mb-10 max-w-[600px] mx-auto ">
-          <p data-aos="fade-up" className=" text-sm text-primary">
+          <p data-aos="fade-up" className=" text-sm mb-2 text-primary">
             What Our customers are saying
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl mb-2 font-bold">
             Testimonials
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
+          <p data-aos="fade-up" className="text-xs  text-gray-400">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
             illo sit, voluptatum voluptates fuga,nobis vitae laborum inventore
             in cum error, dolorum assumenda, ea ratione voluptatem. Cum incidunt
             rem quas
           </p>
         </div>
+
         {/* Testimonial Cards  */}
 
         <div data-aos="zoom-in">
